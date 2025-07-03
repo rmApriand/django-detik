@@ -1,0 +1,8 @@
+{% extends "frontend/layout.html" %}
+
+
+{% block content %}
+    {% for berita in daftar_berita %}
+        <h1><a href="{% url 'tampilkan_berita' berita.pk %}">{{ berita.judul }}</a></h1>
+    {% endfor %}
+{% endblock content %}
